@@ -1,0 +1,13 @@
+{
+  "name": "media-api-server",
+  "version": "1.0.0",
+  "description": "Servidor API para convertir markdown, imágenes, audio y video",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "multer": "^1.4.5"
+  }
+}
