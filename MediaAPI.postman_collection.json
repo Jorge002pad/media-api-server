@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "e5f0c891-df77-4a5d-8925-df3d1a8c6e24",
+    "name": "Media API Server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Markdown a PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/markdown-to-pdf",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["markdown-to-pdf"]
+        }
+      }
+    },
+    {
+      "name": "DOCX a PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/docx-to-pdf",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["docx-to-pdf"]
+        }
+      }
+    },
+    {
+      "name": "HTML a PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/html-to-pdf",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["html-to-pdf"]
+        }
+      }
+    },
+    {
+      "name": "Comprimir imagen",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/compress-image",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["compress-image"]
+        }
+      }
+    },
+    {
+      "name": "Redimensionar imagen",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/resize-image",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["resize-image"]
+        }
+      }
+    },
+    {
+      "name": "Convertir imagen de formato",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/convert-image",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["convert-image"]
+        }
+      }
+    }
+  ]
+}
