@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('Servidor API activo 🎉');
+  res.send('hola mundo corazon de melon 🎉');
 });
 
 app.listen(PORT, () => {

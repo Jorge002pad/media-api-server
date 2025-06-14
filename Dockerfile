@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copiar y preparar dependencias de Node
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 
 # Copiar el resto del código
