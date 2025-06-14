@@ -1,16 +1,21 @@
-
-// src/index.js
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.send('hola mundo corazon de melon 🎉');
-});
+// Rutas
+app.use(require('./routes/convertMarkdown'));
+app.use(require('./routes/convertDocx'));
+app.use(require('./routes/convertHtml'));
+app.use(require('./routes/compressImage'));
+app.use(require('./routes/resizeImage'));
+app.use(require('./routes/convertImageFormat'));
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+// This code sets up an Express server that listens on a specified port and serves static files from the 'public' directory.
+// It also imports and uses various routes for converting file formats, compressing images, and resizing images.
