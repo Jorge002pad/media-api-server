@@ -8,13 +8,14 @@ const router = express.Router();
 const upload = multer({ dest: 'public/' });
 
 router.post('/compress-image', upload.single('image'), (req, res) => {
-  
-  //const input = req.file.path;
-  const input = `${req.file.path}.jpg`;
-  const output = `compress-${input}`;
+  const input = req.file.path;
+  const output = `${input}-compressed.jpg`;
   console.log(`Comprimindo imagem: ${input} para ${output}`);
 
   exec(`convert ${input} -quality 50 ${output}`, (err) => {
+    console.log(`Comando executado: convert ${input} -quality 50 ${output}`);
+    console.log(`Erro: ${err}`);
+    console.log(`Saída: ${output}`);
     if (err) return res.status(500).send('Error al comprimir imagen.');
 
     res.download(output, 'comprimida.jpg', () => {
