@@ -8,7 +8,9 @@ const router = express.Router();
 const upload = multer({ dest: 'public/' });
 
 router.post('/compress-image', upload.single('image'), (req, res) => {
-  const input = req.file.path;
+  
+  //const input = req.file.path;
+  const input = `${req.file.path}.jpg`;
   const output = `${input}-compressed.jpg`;
   console.log(`Comprimindo imagem: ${input} para ${output}`);
 
