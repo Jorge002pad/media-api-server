@@ -11,7 +11,7 @@ router.post('/compress-image', upload.single('image'), (req, res) => {
   
   //const input = req.file.path;
   const input = `${req.file.path}.jpg`;
-  const output = `${input}-compressed.jpg`;
+  const output = `compress-${input}`;
   console.log(`Comprimindo imagem: ${input} para ${output}`);
 
   exec(`convert ${input} -quality 50 ${output}`, (err) => {
